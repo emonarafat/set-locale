@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Data;
-
+using SetLocale.Client.Web.Helpers;
 namespace SetLocale.Client.Web.Models
 {
     public class TranslationModel : BaseModel
@@ -12,8 +12,8 @@ namespace SetLocale.Client.Web.Models
 
         public bool IsValid()
         {
-            return !string.IsNullOrEmpty(Key)
-                   && !string.IsNullOrEmpty(Value);
+            return !Key.IsNullOrEmpty()
+                   && !Value.IsNullOrEmpty();
         }
     }
 }

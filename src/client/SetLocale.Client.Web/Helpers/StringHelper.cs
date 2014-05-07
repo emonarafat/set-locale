@@ -62,5 +62,10 @@ namespace SetLocale.Client.Web.Helpers
                 return false;
             }
         }
+
+        public static bool IsNullOrEmpty(this string text)
+        {
+            return string.IsNullOrEmpty(text);
+        }
     }
 }
