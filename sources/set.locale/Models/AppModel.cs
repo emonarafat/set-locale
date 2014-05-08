@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-
+using set.locale.Helpers;
 using set.locale.Data.Entities;
 
 namespace set.locale.Models
@@ -27,8 +27,8 @@ namespace set.locale.Models
 
         public bool IsValid()
         {
-            return !string.IsNullOrEmpty(Name)
-                   && !string.IsNullOrEmpty(Url);
+            return !Name.IsNullOrEmpty()
+                   && !Url.IsNullOrEmpty();
 
         }
         public bool IsNotValid()

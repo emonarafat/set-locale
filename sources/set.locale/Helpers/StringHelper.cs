@@ -68,7 +68,10 @@ namespace set.locale.Helpers
         {
             return text.Trim().ToLower(ConstHelper.CultureTR);
         }
-
+        public static bool IsNullOrEmpty(this string text)
+        {
+            return string.IsNullOrEmpty(text);
+        }
         public static bool IsEmail(this string text)
         {
             try
